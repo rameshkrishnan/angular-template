@@ -80,6 +80,8 @@ Below this level you will find various folders that arrange the application's fu
 
 - `components:` Contains all the components of the application. We recommend thinking of an Angular application as a tree of components, starting with the `app` component as the root of this tree.
 
+- `modules:` Contains all the modules of the application. Modules are the partials which will get urls (route), whereas components are the individual / independent elements of the application.
+
 - `images:` Images used in the application.
 
 ## Tasks
