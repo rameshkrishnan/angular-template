@@ -3,7 +3,6 @@
 
     var core = angular.module('app.core');
 
-    // Application configuration values
     var config = {
         appErrorPrefix: '[Angular Template Error] ',
         appTitle: 'Angular Template'
@@ -11,15 +10,14 @@
 
     core.value('config', config);
 
-    // Configure the app
     core.config(configure);
 
     configure.$inject =
-        ['$compileProvider', '$logProvider', 'exceptionHandlerProvider'];
+        ['$compileProvider', '$logProvider', 'routerHelperProvider', 'exceptionHandlerProvider'];
 
     /* @ngInject */
     function configure(
-        $compileProvider, $logProvider, exceptionHandlerProvider) {
+        $compileProvider, $logProvider, routerHelperProvider, exceptionHandlerProvider) {
 
         // During development, you may want to set debugInfoEnabled to true. This is required for tools like
         // Protractor, Batarang and ng-inspector to work correctly. However do not check in this change.
@@ -30,7 +28,7 @@
         if ($logProvider.debugEnabled) {
             $logProvider.debugEnabled(true);
         }
-
         exceptionHandlerProvider.configure(config.appErrorPrefix);
+        routerHelperProvider.configure({docTitle: config.appTitle + ': '});
     }
 })();
