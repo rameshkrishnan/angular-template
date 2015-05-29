@@ -11,7 +11,7 @@
     function DashboardController(logger) {
 
         var vm = this;
-        
+
         vm.title = 'Dashboard';
 
         activate();

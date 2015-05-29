@@ -19,8 +19,8 @@
                 config: {
                     url: '/',
                     templateUrl: 'modules/dashboard/dashboard.html',
-		            controller: 'DashboardController',
-		            controllerAs: 'vm',
+                    controller: 'DashboardController',
+                    controllerAs: 'vm',
                     title: 'Dashboard',
                     settings: {
                         nav: 1  // position in navbar
