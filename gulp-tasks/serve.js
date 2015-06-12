@@ -100,6 +100,7 @@ module.exports = function (config) {
                     '/fonts': './bower_components/bootstrap-sass/assets/fonts',
                     '/src': config.sourceDir,
                     '/images': config.sourceDir + 'images',
+                    '/data': config.sourceDir + 'data',
                     '/.tmp': config.tempDir
                 } : {},
                 middleware: [

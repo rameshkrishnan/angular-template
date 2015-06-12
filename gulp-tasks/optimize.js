@@ -6,7 +6,7 @@ module.exports = function (config) {
     var $ = config.$,
         log = config.log;
 
-    gulp.task('build', [ 'optimize', 'images', 'fonts' ], function () {
+    gulp.task('build', [ 'optimize', 'images', 'data', 'fonts' ], function () {
         log('Building everything');
         del(config.tempDir);
     });

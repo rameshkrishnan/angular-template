@@ -21,6 +21,13 @@ module.exports = function (config) {
             .pipe(gulp.dest(config.buildDir + 'images'));
     });
 
+    gulp.task('data', ['clean-data'], function () {
+        config.log('Compressing and copying data');
+
+        return gulp
+            .src(config.sourceDir + 'data/**/*.*')
+            .pipe(gulp.dest(config.buildDir + 'data'));
+    });
 
 };
 

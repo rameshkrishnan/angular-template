@@ -19,6 +19,10 @@ module.exports = function (config) {
         clean(config.buildDir + 'images/**/*.*', done);
     });
 
+    gulp.task('clean-data', function (done) {
+        clean(config.buildDir + 'data/**/*.*', done);
+    });
+
     gulp.task('clean-code', function (done) {
         var files = [].concat(
             config.tempDir + '**/*.js',
